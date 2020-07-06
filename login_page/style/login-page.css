@@ -1,0 +1,239 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  width: 280px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-wrap {
+  display: flex;
+  height: 100vh;
+  width: 65vw;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.myform {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  display: inline-block;
+  padding-top: 25vh;
+  width: 260px;
+}
+
+.myform img {
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.myform .section-header-wrapper__form {
+  width: 100%;
+}
+
+.myform .section-header-wrapper__form-input,
+.myform .section-header-wrapper__form-button {
+  width: 100%;
+}
+
+.myform input {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  outline: none;
+  width: 100%;
+  height: 44px;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  padding-left: 15px;
+  transition: all 0.2s ease-in;
+}
+
+.myform input::placeholder {
+  color: rgba(31, 32, 65, 0.25);
+  transition: all 0.2s ease-in;
+}
+
+.myform input:hover, .myform input:focus {
+  transition: all 0.5s ease;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+.myform input:hover::placeholder, .myform input:focus::placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.myform .button-original {
+  width: 100%;
+  font-size: 12px;
+  line-height: 15px;
+  position: relative;
+  background: linear-gradient(180deg, #FAD26F 20%, #FFB56E 80%);
+  border-radius: 22px;
+  height: 44px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  z-index: 0;
+  color: #ffffff;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all .2s;
+}
+
+.myform .button-original:hover {
+  opacity: 0.6;
+}
+
+.myform .button-original.long {
+  position: relative;
+}
+
+.myform .button-original.long svg {
+  position: absolute;
+  content: "";
+  top: 13px;
+  right: 15px;
+  width: 18px;
+  height: 18px;
+}
+
+.myform .button-original.long svg path {
+  fill: #FFFFFF;
+}
+
+.myform .backsay {
+  display: inline-block;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.slider-wrap * {
+  box-sizing: border-box;
+}
+
+.slider-wrap .slideshow {
+  max-width: 35vw;
+  position: relative;
+  margin: auto;
+}
+
+.slider-wrap .mySlides {
+  display: none;
+}
+
+.slider-wrap .mySlides img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.slider-wrap .prev,
+.slider-wrap .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.slider-wrap .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.slider-wrap .prev:hover,
+.slider-wrap .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slider-wrap .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.slider-wrap .active,
+.slider-wrap .dot:hover {
+  background-color: #717171;
+}
+
+.slider-wrap .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
