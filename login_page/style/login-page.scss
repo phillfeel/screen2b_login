@@ -31,40 +31,45 @@ ul {
   list-style: none;
 }
 
-img {
-  width: 280px;
+a {
+  color: inherit;
 }
-
 // --- main --- //
 
 body {
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .layout {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  overflow: hidden;
+  height: 100vh;
 }
 
 // --- form --- //
 
 .form-wrap {
   display: flex;
-  height: 100vh;
+  height: 100%;
   width: 65vw;
   justify-content: space-between;
   flex-direction: column;
+  
 
 }
 
 .myform {
   margin-left: auto;
   margin-right: auto;
-  width: fit-content;
   display: inline-block;
-  padding-top: 25vh;
+  padding-top: 0px;
   width: 260px;
+
+
 
   img {
     width: 100%;
@@ -79,12 +84,12 @@ body {
   .section-header-wrapper__form-input,
   .section-header-wrapper__form-button {
     width: 100%;
+    margin-bottom: 10px;
   }
 
 
 
   input {
-
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
@@ -114,9 +119,13 @@ body {
         color: rgba(31, 32, 65, 0.75);
       }
     }
+    &.error{
+      border: 1px solid red;
+    }
   }
 
   .button-original {
+    margin-top: 10px;
     width: 100%;
     font-size: 12px;
     line-height: 15px;
@@ -162,15 +171,51 @@ body {
   }
 
   .backsay {
-    display: inline-block;
+    display: block;
+    opacity: 0;
+    font-size: 12px;
+    color: gray;
+    min-height: 30px;
+    width: 100%;
   }
 }
+// --- language --- //
+.language, .language > *{
+  display:inline-block;
+  text-align: center;
+}
+
 
 // --- copyright --- //
 
 .copyright {
   text-align: center;
+  font-size: 14px;
+  color: #7f7f7f;
+  padding-bottom: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  p{
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  img{
+    width: 15px;
+    height: 15px;
+  }
+  .sign-in-offer{
+    margin-left: 5px;
+    display: inline-block;
+    margin-bottom: 5px;
+    a{
+      &:hover{
+        color: black;
+      }
+    }
+    
+  }
 }
+
 
 
 // --- slider --- //
@@ -189,10 +234,11 @@ body {
 
   .mySlides {
     display: none;
+    height: 100%;
 
     img {
       width: 100%;
-      height: 100vh;
+      height: 102vh;
       object-fit: cover;
     }
 
@@ -264,5 +310,121 @@ body {
     to {
       opacity: 1
     }
+  }
+}
+
+// --- Dropdown language --- //
+
+
+/* step1 */
+
+/* step1 */
+.lang-drop {
+  margin: 15px;
+  width: 70px;
+}
+.dropdown {
+
+  width: 100%;
+	text-align:left;
+  color: #333;
+	user-select: none;
+	background: white;
+	cursor: pointer;
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	position: relative;
+	font-size: 12px;
+	background: white;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  transition: .3s;
+  &:hover {
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    .dropdown_arrow {
+      color: rgba(31, 32, 65, 0.5);
+    }
+  }
+}
+
+
+/* step1 */
+.dropdown_value {
+	display: inline-block;
+	padding-left: 5px;
+}
+
+/* step1 */
+.dropdown_arrow {
+	transition: all 0.2s ease;
+	position: absolute;
+	right: 5px;
+	top: 0px;
+	color:rgba(31, 32, 65, 0.25);
+  font-size: 15px;
+    
+}
+
+/* step2 */
+.dropdown_panel {
+	position: absolute;
+	background: transparent;
+	width: calc(100% + 11px);
+	z-index: 9999;
+	height: 203px;
+	left: 0px;
+	top: 26px;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+/* step2 */
+.dropdown_items {
+	position: absolute;
+	pointer-events: all;
+	z-index: 9999;
+	top: 0px;
+	width: calc(100% - 11px);
+	max-height: 170px;
+	background: white;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	//box-shadow: 2px 2px 2px #999;
+	transform: translate(0px, -200px);
+	transition: 0.3s all ease-out;
+	overflow-y: auto;
+	border: 1px solid #aaa;
+}
+
+/* step2 */
+.dropdown_item {
+	padding: 5px;
+}
+
+/* step2 */
+.dropdown_item:hover {
+	background: rgba(31, 32, 65, 0.03);
+}
+
+/* step2 */
+.dropdown ::-webkit-scrollbar {
+	width: 2px;
+}
+
+/* step2 */
+.dropdown ::-webkit-scrollbar-thumb {
+	background-color: #999;
+}
+
+@media (max-width:680px){
+  .slider-wrap {
+    display: none;
+  }
+  .form-wrap {
+    width: 100vw;
+  }
+  .copyright {
+    font-size: 12px;
   }
 }

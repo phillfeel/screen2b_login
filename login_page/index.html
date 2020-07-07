@@ -4,41 +4,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/login-page.css">
+  <title>Вход</title>
+  <link href="img/favicon.png" rel="icon" type="image/png" />
 </head>
 
 <body>
   <div class="layout">
     <div class="form-wrap">
+      <div class="lang-drop" id="dd1"></div>
       <form class='myform' action="" method="POST">
           <img src="img/screen2b_logo_big.png" alt="screen2b-logo" style="object-fit: cover;" />
-
-
         <div class="section-header-wrapper__form">
-
           <div class="section-header-wrapper__form-input">
-            <input name="name" type="text" placeholder="Логин" />
+            <input class="translation" id="id1" name="login" type="text" placeholder="Логин" />
           </div>
-          <div class="backsay" id="backsay1"></div>
-
           <div class="section-header-wrapper__form-input">
-            <input name="email" type="mail" placeholder="Пароль" />
+            <input class="translation" id="id2" name="password" type="password" placeholder="Пароль" />
           </div>
-          <div class="backsay" id="backsay2"></div>
+          
           <div class="section-header-wrapper__form-button">
-            <button class="button-original long">войти<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="button-original long"><p class="translation" id="id3">войти</p><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z"
                   fill="none"></path>
               </svg></button>
           </div>
+          <div class="backsay translation" id="id6"></div>
         </div>
       </form>
+      <!-- <div class="language">
+        <div class="rus">Русский
+        </div>
+        <div class="eng">English</div>
+      </div> -->
+
       <div class="copyright">
-        &copy; Screen2b, 2020, Все права защищены
-        <span class="sign-in-offer"><i class="icon_offer"></i> <a
+        <p class="sybol">&copy; Screen2b, 2020,</p>
+        <p class="translation" id="id4"> Все права защищены</p>
+        <span class="sign-in-offer">
+          <img src="img/doc.svg" alt="">
+          <a class="translation" id="id5"
             href="https://docs.google.com/viewerng/viewer?url=https://monitorfiles.1mt.ru/Offer/Screen2bOffer.pdf"
             target="_blank">Договор оферты</a></span> </div>
     </div>
