@@ -383,6 +383,9 @@ body {
 }
 
 @media (max-width: 680px) {
+  .layout {
+    height: 90vh;
+  }
   .slider-wrap {
     display: none;
   }

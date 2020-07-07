@@ -103,7 +103,7 @@ var dictRussian = {
     id6: "Логин и пароль должны быть больше 3 символов"
 };
 
-var dictSpain = {
+var dictEspaña = {
     id1: "el login",
     id2: "contraseña",
     id3: "registrarse",
