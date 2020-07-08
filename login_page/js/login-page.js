@@ -114,6 +114,15 @@ var dictEspaña = {
     id6: "El inicio de sesión y la contraseña deben tener más de 3 caracteres"
 };
 
+var dict中文 = {
+    id1: "登錄",
+    id2: "密碼",
+    id3: "登入",
+    id4: "保留所有權利",
+    id5: "條款和條件", 
+    id6: "登錄名和密碼必須超過3個字符"
+};
+
 function changeLanguage(language) {
     var allTranslate = document.getElementsByClassName('translation')
     console.log(allTranslate)

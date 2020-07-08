@@ -2,14 +2,14 @@
   font-family: "Montserrat";
   font-weight: normal;
   font-style: normal;
-  src: url("/fonts/montserrat-v14-latin_cyrillic-regular.woff2") format("woff2"), url("/fonts/montserrat-v14-latin_cyrillic-regular.woff") format("woff"), url("/fonts/montserrat-v14-latin_cyrillic-regular.ttf") format("truetype"), url("/fonts/montserrat-v14-latin_cyrillic-regular.eot?") format("eot"), url("/fonts/montserrat-v14-latin_cyrillic-regular.svg#Montserrat") format("svg");
+  src: url("../fonts/montserrat-v14-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/montserrat-v14-latin_cyrillic-regular.woff") format("woff"), url("../fonts/montserrat-v14-latin_cyrillic-regular.ttf") format("truetype"), url("../fonts/montserrat-v14-latin_cyrillic-regular.eot?") format("eot"), url("../fonts/montserrat-v14-latin_cyrillic-regular.svg#Montserrat") format("svg");
 }
 
 @font-face {
   font-family: "Montserrat";
   font-weight: 700;
   font-style: normal;
-  src: url("/fonts/montserrat-v14-latin_cyrillic-700.woff2") format("woff2"), url("/fonts/montserrat-v14-latin_cyrillic-700.woff") format("woff"), url("/fonts/montserrat-v14-latin_cyrillic-700.ttf") format("truetype"), url("/fonts/montserrat-v14-latin_cyrillic-700.eot?") format("eot"), url("/fonts/montserrat-v14-latin_cyrillic-700.svg#Montserrat") format("svg");
+  src: url("../fonts/montserrat-v14-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/montserrat-v14-latin_cyrillic-700.woff") format("woff"), url("../fonts/montserrat-v14-latin_cyrillic-700.ttf") format("truetype"), url("../fonts/montserrat-v14-latin_cyrillic-700.eot?") format("eot"), url("../fonts/montserrat-v14-latin_cyrillic-700.svg#Montserrat") format("svg");
 }
 
 html {
@@ -48,7 +48,7 @@ a {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat";
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -93,7 +93,7 @@ body {
 }
 
 .myform input {
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -127,6 +127,7 @@ body {
 }
 
 .myform .button-original {
+  font-family: "Montserrat";
   margin-top: 10px;
   width: 100%;
   font-size: 12px;
@@ -181,10 +182,10 @@ body {
   text-align: center;
 } */
 .copyright {
+  height: 60px;
   text-align: center;
   font-size: 14px;
   color: #7f7f7f;
-  padding-bottom: 15px;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -197,6 +198,9 @@ body {
 .copyright img {
   width: 15px;
   height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 3px;
 }
 
 .copyright .sign-in-offer {
@@ -387,7 +391,7 @@ body {
 
 @media (max-width: 680px) {
   .layout {
-    height: 85vh;
+    height: 90vh;
   }
   .slider-wrap {
     display: none;
