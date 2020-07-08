@@ -29,6 +29,12 @@
     src: $src;
   }
 }
+// --- VARIABLES --- //
+
+$dark-25: #c7c7d0;
+$dark-50: #8f90a0;
+$dark-75: #575871;
+
 
 // --- FONTS --- //
 
@@ -134,63 +140,63 @@ body {
     width: 100%;
     height: 44px;
     background-color: #FFFFFF;
-    border: 1px solid rgba(31, 32, 65, 0.25);
+    border: 1px solid $dark-25;
     border-radius: 4px;
     padding-left: 15px;
     transition: all 0.2s ease-in;
 
     &::-webkit-input-placeholder {
-      color: rgba(31, 32, 65, 0.25);
+      color: $dark-25;
       -webkit-transition: all 0.2s ease-in;
       transition: all 0.2s ease-in;
     }
 
     &::-moz-placeholder {
-      color: rgba(31, 32, 65, 0.25);
+      color: $dark-25;
       -moz-transition: all 0.2s ease-in;
       transition: all 0.2s ease-in;
     }
 
     &:-ms-input-placeholder {
-      color: rgba(31, 32, 65, 0.25);
+      color: $dark-25;
       -ms-transition: all 0.2s ease-in;
       transition: all 0.2s ease-in;
     }
 
     &::-ms-input-placeholder {
-      color: rgba(31, 32, 65, 0.25);
+      color: $dark-25;
       -ms-transition: all 0.2s ease-in;
       transition: all 0.2s ease-in;
     }
 
     &::placeholder {
-      color: rgba(31, 32, 65, 0.25);
+      color: $dark-25;
       transition: all 0.2s ease-in;
     }
 
     &:hover,
     &:focus {
       transition: all 0.5s ease;
-      border: 1px solid rgba(31, 32, 65, 0.5);
+      border: 1px solid $dark-50;
 
       &::-webkit-input-placeholder {
-        color: rgba(31, 32, 65, 0.75);
+        color: $dark-75;
       }
 
       &::-moz-placeholder {
-        color: rgba(31, 32, 65, 0.75);
+        color: $dark-75;
       }
 
       &:-ms-input-placeholder {
-        color: rgba(31, 32, 65, 0.75);
+        color: $dark-75;
       }
 
       &::-ms-input-placeholder {
-        color: rgba(31, 32, 65, 0.75);
+        color: $dark-75;
       }
 
       &::placeholder {
-        color: rgba(31, 32, 65, 0.75);
+        color: $dark-75;
       }
     }
     &.error{
