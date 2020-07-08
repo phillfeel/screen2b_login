@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "Montserrat";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/fonts/montserrat-v14-latin_cyrillic-regular.woff2") format("woff2"), url("/fonts/montserrat-v14-latin_cyrillic-regular.woff") format("woff"), url("/fonts/montserrat-v14-latin_cyrillic-regular.ttf") format("truetype"), url("/fonts/montserrat-v14-latin_cyrillic-regular.eot?") format("eot"), url("/fonts/montserrat-v14-latin_cyrillic-regular.svg#Montserrat") format("svg");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/fonts/montserrat-v14-latin_cyrillic-700.woff2") format("woff2"), url("/fonts/montserrat-v14-latin_cyrillic-700.woff") format("woff"), url("/fonts/montserrat-v14-latin_cyrillic-700.ttf") format("truetype"), url("/fonts/montserrat-v14-latin_cyrillic-700.eot?") format("eot"), url("/fonts/montserrat-v14-latin_cyrillic-700.svg#Montserrat") format("svg");
+}
+
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -162,11 +176,10 @@ body {
   width: 100%;
 }
 
-.language, .language > * {
-  display: inline-block;
+/* .language, .language > *{
+  display:inline-block;
   text-align: center;
-}
-
+} */
 .copyright {
   text-align: center;
   font-size: 14px;
@@ -283,8 +296,6 @@ body {
   }
 }
 
-/* step1 */
-/* step1 */
 .lang-drop {
   margin: 15px;
   width: 70px;
@@ -316,13 +327,11 @@ body {
   color: rgba(31, 32, 65, 0.5);
 }
 
-/* step1 */
 .dropdown_value {
   display: inline-block;
   padding-left: 5px;
 }
 
-/* step1 */
 .dropdown_arrow {
   transition: all 0.2s ease;
   position: absolute;
@@ -332,7 +341,6 @@ body {
   font-size: 15px;
 }
 
-/* step2 */
 .dropdown_panel {
   position: absolute;
   background: transparent;
@@ -345,7 +353,6 @@ body {
   pointer-events: none;
 }
 
-/* step2 */
 .dropdown_items {
   position: absolute;
   pointer-events: all;
@@ -362,29 +369,25 @@ body {
   border: 1px solid #aaa;
 }
 
-/* step2 */
 .dropdown_item {
   padding: 5px;
 }
 
-/* step2 */
 .dropdown_item:hover {
   background: rgba(31, 32, 65, 0.03);
 }
 
-/* step2 */
 .dropdown ::-webkit-scrollbar {
   width: 2px;
 }
 
-/* step2 */
 .dropdown ::-webkit-scrollbar-thumb {
   background-color: #999;
 }
 
 @media (max-width: 680px) {
   .layout {
-    height: 90vh;
+    height: 85vh;
   }
   .slider-wrap {
     display: none;

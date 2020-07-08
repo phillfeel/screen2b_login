@@ -1,4 +1,42 @@
-// --- min css --- //
+// --- FONTS SCRIPT --- //
+
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($name, " ", "_")
+  );
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype"
+  );
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+  @font-face {
+    font-family: quote($name);
+    font-weight: $weight;
+    font-style: $style;
+    src: $src;
+  }
+}
+
+// --- FONTS --- //
+
+@include font-face('Montserrat', '/fonts/montserrat-v14-latin_cyrillic-regular', normal, normal, woff2 woff ttf eot svg);
+@include font-face('Montserrat', '/fonts/montserrat-v14-latin_cyrillic-700', 700, normal, woff2 woff ttf eot svg);
+
+
+// --- MIN CSS --- //
 
 html {
   box-sizing: border-box;
@@ -50,7 +88,7 @@ body {
   height: 100vh;
 }
 
-// --- form --- //
+// --- FORM --- //
 
 .form-wrap {
   display: flex;
@@ -69,13 +107,10 @@ body {
   padding-top: 0px;
   width: 260px;
 
-
-
   img {
     width: 100%;
     padding-bottom: 15px;
   }
-
 
   .section-header-wrapper__form {
     width: 100%;
@@ -86,8 +121,6 @@ body {
     width: 100%;
     margin-bottom: 10px;
   }
-
-
 
   input {
     font-family: Montserrat;
@@ -147,8 +180,6 @@ body {
 
     &:hover {
       opacity: 0.6;
-      //background: linear-gradient(var(--color-main-opacity, rgba(188, 156, 255, 0.5)), var(--color-main_grad-opacity, rgba(139, 164, 249, 0.5)));
-      //transition: all .2s;
     }
 
     &.long {
@@ -179,14 +210,16 @@ body {
     width: 100%;
   }
 }
-// --- language --- //
-.language, .language > *{
+
+// --- EASY LANGHUAGE CHANGE --- //
+
+/* .language, .language > *{
   display:inline-block;
   text-align: center;
-}
+} */
 
 
-// --- copyright --- //
+// --- COPYRIGHT --- //
 
 .copyright {
   text-align: center;
@@ -216,9 +249,7 @@ body {
   }
 }
 
-
-
-// --- slider --- //
+// --- SLIDER --- //
 
 .slider-wrap {
 
@@ -313,12 +344,8 @@ body {
   }
 }
 
-// --- Dropdown language --- //
+// --- DROPDOWN LANGUAGE --- //
 
-
-/* step1 */
-
-/* step1 */
 .lang-drop {
   margin: 15px;
   width: 70px;
@@ -348,14 +375,11 @@ body {
   }
 }
 
-
-/* step1 */
 .dropdown_value {
 	display: inline-block;
 	padding-left: 5px;
 }
 
-/* step1 */
 .dropdown_arrow {
 	transition: all 0.2s ease;
 	position: absolute;
@@ -366,7 +390,6 @@ body {
     
 }
 
-/* step2 */
 .dropdown_panel {
 	position: absolute;
 	background: transparent;
@@ -379,7 +402,6 @@ body {
 	pointer-events: none;
 }
 
-/* step2 */
 .dropdown_items {
 	position: absolute;
 	pointer-events: all;
@@ -397,29 +419,25 @@ body {
 	border: 1px solid #aaa;
 }
 
-/* step2 */
 .dropdown_item {
 	padding: 5px;
 }
 
-/* step2 */
 .dropdown_item:hover {
 	background: rgba(31, 32, 65, 0.03);
 }
 
-/* step2 */
 .dropdown ::-webkit-scrollbar {
 	width: 2px;
 }
 
-/* step2 */
 .dropdown ::-webkit-scrollbar-thumb {
 	background-color: #999;
 }
 
 @media (max-width:680px){
   .layout {
-    height: 90vh;
+    height: 85vh;
   }
   .slider-wrap {
     display: none;

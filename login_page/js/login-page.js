@@ -1,3 +1,5 @@
+// --- VALIDATION FORM --- //
+
 jQuery(function ($) {
     $('.myform').on('submit', function (event) {
         event.preventDefault(); // отменяем событие по умолчанию
@@ -109,7 +111,7 @@ var dictEspaña = {
     id3: "registrarse",
     id4: "Todos los derechos estan reservados",
     id5: "Términos y Condiciones", 
-    id6: "Login and password must be more than 3 characters"
+    id6: "El inicio de sesión y la contraseña deben tener más de 3 caracteres"
 };
 
 function changeLanguage(language) {
@@ -139,7 +141,8 @@ rusButton.onclick = function () {
     changeLanguage("Rus")
 }; */
 
-// --- Dropdown --- //
+
+// --- DROPDOWN --- //
 
 // step1
 function Dropdown(o)
