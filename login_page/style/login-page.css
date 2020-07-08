@@ -108,6 +108,30 @@ body {
   transition: all 0.2s ease-in;
 }
 
+.myform input::-webkit-input-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.myform input::-moz-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.myform input:-ms-input-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+  -ms-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.myform input::-ms-input-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+  -ms-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
 .myform input::placeholder {
   color: rgba(31, 32, 65, 0.25);
   transition: all 0.2s ease-in;
@@ -116,6 +140,22 @@ body {
 .myform input:hover, .myform input:focus {
   transition: all 0.5s ease;
   border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+.myform input:hover::-webkit-input-placeholder, .myform input:focus::-webkit-input-placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.myform input:hover::-moz-placeholder, .myform input:focus::-moz-placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.myform input:hover:-ms-input-placeholder, .myform input:focus:-ms-input-placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.myform input:hover::-ms-input-placeholder, .myform input:focus::-ms-input-placeholder {
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .myform input:hover::placeholder, .myform input:focus::placeholder {
@@ -231,6 +271,7 @@ body {
 .slider-wrap .mySlides img {
   width: 100%;
   height: 102vh;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -309,6 +350,9 @@ body {
   width: 100%;
   text-align: left;
   color: #333;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   background: white;
   cursor: pointer;
